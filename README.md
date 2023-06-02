@@ -4,12 +4,14 @@ BigQueryのSQLを生成するツールです。
 対象のテーブルIDと作成したいSQLを指示で自然言語に入力するとSQLが自動で生成されて BigQueryに対して実行されます。
 
 # Getting Started
-OpenAI APIのtokenを用意してください
+- OpenAI APIのtokenを用意してください
+- BigQueryのServiceAccountのCredentialのJsonを用意してください
 
 ```
 pipenv install
 pipenv shell
 export DEFAULT_API_KEY=<YOUR_API_KEY>
+export DEFAULT_SA_PATH=<YOUR_CREDENTIAL_PATH>
 streamlist run main
 ```
 

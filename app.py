@@ -42,7 +42,7 @@ class App():
             else:
                 return self.bq.client.query(query).to_dataframe()
         except BadRequest as e:
-            st.code('== エラーが発生したので再試行します ==', language='shellSession')
+            st.code('== エラーが発生しました. エラーを考慮して再試行します.  ==', language='shellSession')
 
             error_msgs = []
             for err in e.errors:
